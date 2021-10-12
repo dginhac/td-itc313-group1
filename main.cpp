@@ -14,6 +14,6 @@ int main(int argc, char const *argv[]) {
 
    date::Date date1(10,12);
 
-   std::cout << "Bye" << std::endl;
+   std::cout << "Hello world" << std::endl;
    return 0;
 }
