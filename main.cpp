@@ -15,5 +15,6 @@ int main(int argc, char const *argv[]) {
    date::Date date1(10,12);
 
    std::cout << "Hello world" << std::endl;
+   std::cout << "I'm a fucking developer" << std::endl;
    return 0;
 }
