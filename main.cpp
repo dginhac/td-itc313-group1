@@ -16,5 +16,6 @@ int main(int argc, char const *argv[]) {
 
    std::cout << "Hello world" << std::endl;
    std::cout << "I'm a fucking developer" << std::endl;
+   std::cout << "It's amazing" << std::endl;
    return 0;
 }
