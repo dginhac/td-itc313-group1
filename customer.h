@@ -29,13 +29,15 @@ namespace people {
         std::string lastname() const;
         date::Date birthday() const;
         Gender gender() const;
-        std::string fullIdentity() const;
+
     private:
         std::string _firstname;
         std::string _lastname;
         date::Date _birthday;
         Gender _gender;
     };
+
+    std::string fullIdentity(Customer customer);
 } // people
 
 #endif // CUSTOMER_H

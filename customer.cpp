@@ -34,15 +34,17 @@ namespace people {
         return _gender;
     }
 
-    std::string Customer::fullIdentity() const {
+    std::string fullIdentity(Customer customer)  {
         std::string gender;
-        if (_gender == Gender::woman) {
+        if (customer.gender() == Gender::woman) {
             gender = "Ms";
         }
         else {
             gender = "Mr";
         }
-        return gender + " " + _firstname + " " + _lastname;
+        return gender + " " +
+               customer.firstname() + " " +
+               customer.lastname();
     }
 
 

@@ -16,7 +16,7 @@ int main(int argc, char const *argv[]) {
    date::Date d1(5,26);
    people::Customer c1("Dom", "Ginhac", d1, people::Gender::man);
 
-   std::cout << "Hello " << c1.fullIdentity() << std::endl;
+   std::cout << "Hello " << fullIdentity(c1) << std::endl;
    std::cout << "bye." << std::endl;
    return 0;
 }
