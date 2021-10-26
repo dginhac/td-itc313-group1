@@ -29,3 +29,11 @@ Methodes ou Fonctions Helper
 * Getters 
 * surcharges d'opérateur <<
 * Identite complete
+
+
+## Doc git
+Voir https://git-scm.com ou https://www.atlassian.com/fr/git
+
+
+
+
