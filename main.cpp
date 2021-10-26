@@ -30,6 +30,8 @@ int main(int argc, char const *argv[]) {
 
    std::string iban = a1.iban();
    std::cout << "iban: " << iban << std::endl;
+
+   std::cout << a1 << std::endl;
    std::cout << "bye." << std::endl;
    return 0;
 }

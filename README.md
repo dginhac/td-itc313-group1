@@ -8,12 +8,12 @@ Variables:
 
 Methodes ou Fonctions Helper
 * constructeur
-* Getters ? / Setters ?
+* Getters 
 * debit
 * credit
 * transfert
 * genererIBAN ?
-* surcharges d'opérateur ?
+* surcharges d'opérateur <<
 * ?
 
 ## Classe Customer: OK

@@ -21,11 +21,14 @@ namespace bank {
         people::Customer customer() const;
         double balance() const;
         std::string iban() const;
+
     private:
         people::Customer _customer;
         double _balance;
         std::string _iban;
     };
+
+    std::ostream& operator<<(std::ostream& os, Account& account);
 }
 
 
