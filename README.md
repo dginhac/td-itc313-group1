@@ -16,7 +16,7 @@ Methodes ou Fonctions Helper
 * surcharges d'opérateur ?
 * ?
 
-## Classe Customer
+## Classe Customer: OK
 
 Variables:
 * nom (lastname) : string
@@ -26,7 +26,6 @@ Variables:
 
 Methodes ou Fonctions Helper
 * constructeur
-* Getters ? / Setters ?
-* surcharges d'opérateur ?
+* Getters 
+* surcharges d'opérateur <<
 * Identite complete
-* ?

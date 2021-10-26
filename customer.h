@@ -38,6 +38,9 @@ namespace people {
     };
 
     std::string fullIdentity(Customer customer);
+
+    std::ostream& operator<<(std::ostream& os, Customer& customer);
+
 } // people
 
 #endif // CUSTOMER_H

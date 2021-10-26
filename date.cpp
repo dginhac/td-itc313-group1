@@ -99,6 +99,11 @@ namespace date {
         return std::to_string(d.day()) + "/" + std::to_string(d.month()) ;
     }
 
+    std::ostream& operator<< (std::ostream& os, Date& date) {
+        os << std::to_string(date.day()) + "/" + std::to_string(date.month()) ;
+        return os;
+    }
+
     Date operator + (const Date& date, const int days) {
         if (days <0) { //if days <0, we call Date - (-days)
             return date - (-days);
