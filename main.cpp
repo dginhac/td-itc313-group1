@@ -7,15 +7,16 @@
 
 #include <iostream>
 #include "date.h"
+#include "customer.h"
 
 
 
 int main(int argc, char const *argv[]) {
 
-   date::Date date1(10,12);
+   date::Date d1(5,26);
+   people::Customer c1("Dom", "Ginhac", d1, people::Gender::man);
 
-   std::cout << "Hello world" << std::endl;
-   std::cout << "I'm a fucking developer" << std::endl;
-   std::cout << "It's amazing" << std::endl;
+   std::cout << "Hello " << c1.fullIdentity() << std::endl;
+
    return 0;
 }
