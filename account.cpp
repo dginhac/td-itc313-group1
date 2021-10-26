@@ -25,14 +25,10 @@ namespace bank {
         return _iban;
     }
 
-    std::ostream& operator<<(std::ostream& os, Account& account) {
-
-        people::Customer customer = account.customer();
-        os << "Customer : " << customer << std::endl;
-        double balance = account.balance();
-        os << "  Balance: " << balance << std::endl;
-        std::string iban = account.iban();
-        os << "  IBAN: " << iban << std::endl;
+    std::ostream& operator<<(std::ostream& os, const Account& account) {
+        os << "Customer : " << account.customer() << std::endl;
+        os << "  Balance: " << account.balance() << std::endl;
+        os << "  IBAN: " << account.iban() << std::endl;
         return os;
     }
 

@@ -28,7 +28,7 @@ namespace bank {
         std::string _iban;
     };
 
-    std::ostream& operator<<(std::ostream& os, Account& account);
+    std::ostream& operator<<(std::ostream& os, const Account& account);
 }
 
 

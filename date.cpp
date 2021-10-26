@@ -99,7 +99,7 @@ namespace date {
         return std::to_string(d.day()) + "/" + std::to_string(d.month()) ;
     }
 
-    std::ostream& operator<< (std::ostream& os, Date& date) {
+    std::ostream& operator<< (std::ostream& os, const Date& date) {
         os << std::to_string(date.day()) + "/" + std::to_string(date.month()) ;
         return os;
     }

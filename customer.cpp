@@ -47,8 +47,8 @@ namespace people {
                customer.lastname();
     }
 
-    std::ostream& operator<<(std::ostream& os, Customer& customer) {
-        os << fullIdentity(customer) << " (" << toString(customer.birthday()) << ")";
+    std::ostream& operator<<(std::ostream& os, const Customer& customer) {
+        os << fullIdentity(customer) << " (" << customer.birthday() << ")";
         return os;
     }
 

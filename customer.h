@@ -39,7 +39,7 @@ namespace people {
 
     std::string fullIdentity(Customer customer);
 
-    std::ostream& operator<<(std::ostream& os, Customer& customer);
+    std::ostream& operator<<(std::ostream& os, const Customer& customer);
 
 } // people
 
