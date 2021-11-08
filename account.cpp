@@ -7,11 +7,14 @@
   */
 
 #include "account.h"
+//#include <assert>
 
 namespace bank {
     Account::Account(people::Customer customer,
                      double balance, std::string iban) :
-                    _customer(customer), _balance(balance), _iban(iban) {}
+                    _customer(customer), _balance(balance), _iban(iban) {
+                        assert("Balance must be positive to create an account" && balance > 0.0);
+                    }
 
     people::Customer Account::customer() const {
         return _customer;
@@ -23,6 +26,43 @@ namespace bank {
 
     std::string Account::iban() const {
         return _iban;
+    }
+
+    bool Account::debit(double amount) {
+        if ((amount <0) || (amount > _balance)) {
+            return false;
+        }
+        _balance -= amount;
+        return true;
+    }
+
+
+
+
+    bool Account::credit(double amount) {
+        if (amount <0) {
+            return false;
+        }
+        _balance += amount;
+        return true;
+    }
+
+    /*
+    bool Account::transfer(Account& account, double amount) {
+        if (!debit(amount)) {
+            return false;
+        }
+        account.credit(amount);
+        return true;
+    }
+    */
+
+    bool transfer(Account& source, Account& dest, double amount) {
+        if (!source.debit(amount)) {
+            return false;
+        }
+        dest.credit(amount);
+        return true;
     }
 
     std::ostream& operator<<(std::ostream& os, const Account& account) {

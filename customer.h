@@ -7,6 +7,7 @@
   */
 
 #include <string>
+#include <iostream>
 #include "date.h"
 
 #ifndef CUSTOMER_H

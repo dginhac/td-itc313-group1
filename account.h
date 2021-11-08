@@ -21,6 +21,10 @@ namespace bank {
         people::Customer customer() const;
         double balance() const;
         std::string iban() const;
+        bool debit(double amount);
+        bool credit(double amount);
+        //bool transfer(Account& account, double amount);
+
 
     private:
         people::Customer _customer;
@@ -29,6 +33,8 @@ namespace bank {
     };
 
     std::ostream& operator<<(std::ostream& os, const Account& account);
+    bool transfer(Account& source, Account& dest, double amount);
+
 }
 
 

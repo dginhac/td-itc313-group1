@@ -7,13 +7,13 @@ Variables:
 * IBAN (iban) : String ou Objet de la classe IBAN (voir page wikipedia IBAN)
 
 Methodes ou Fonctions Helper
-* constructeur
-* Getters 
-* debit
-* credit
-* transfert
+* constructeur ok (with assert)
+* Getters ok
+* debit ok (method)
+* credit ok (method)
+* transfert ok (helper function)
 * genererIBAN ?
-* surcharges d'opérateur <<
+* surcharges d'opérateur << ok
 * ?
 
 ## Classe Customer: OK
