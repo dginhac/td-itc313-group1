@@ -10,10 +10,10 @@
 //#include <assert>
 
 namespace bank {
-    Account::Account(people::Customer customer,
-                     double balance, std::string iban) :
+    Account::Account(people::Customer customer, std::string iban,
+                     double balance) :
                     _customer(customer), _balance(balance), _iban(iban) {
-                        assert("Balance must be positive to create an account" && balance > 0.0);
+                        assert("Balance must be positive to create an account" && balance >= 0.0);
                     }
 
     people::Customer Account::customer() const {
@@ -70,6 +70,18 @@ namespace bank {
         os << "  Balance: " << account.balance() << std::endl;
         os << "  IBAN: " << account.iban() << std::endl;
         return os;
+    }
+
+    Saving::Saving(people::Customer customer, std::string iban,
+                                    double balance, double rate) :
+                                    Account(customer, iban, balance), _rate(rate) {
+        assert("Rate must be positive to create an account" && rate >= 0.0);
+
+    }
+
+    bool Saving::credit(double amount) {
+        double saving = amount*(1+_rate/100);
+        return Account::credit(saving);
     }
 
   }

@@ -38,9 +38,9 @@ namespace people {
         Gender _gender;
     };
 
-    std::string fullIdentity(Customer customer);
+    std::string fullIdentity(const Customer& customer);
 
-    std::ostream& operator<<(std::ostream& os, const Customer& customer);
+    std::ostream& operator<<(std::ostream& os, const  Customer& customer);
 
 } // people
 

@@ -17,7 +17,7 @@ namespace bank {
     class Account
     {
     public:
-        Account(people::Customer customer, double balance, std::string iban);
+        Account(people::Customer customer, std::string iban, double balance=0.0);
         people::Customer customer() const;
         double balance() const;
         std::string iban() const;
@@ -34,6 +34,14 @@ namespace bank {
 
     std::ostream& operator<<(std::ostream& os, const Account& account);
     bool transfer(Account& source, Account& dest, double amount);
+
+    class Saving : public Account {
+    public:
+        Saving(people::Customer customer, std::string iban, double balance=0.0, double rate=2.0);
+        bool credit(double amount);
+    private:
+        double _rate;
+    };
 
 }
 

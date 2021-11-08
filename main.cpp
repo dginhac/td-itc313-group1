@@ -19,10 +19,10 @@ int main(int argc, char const *argv[]) {
    date::Date d1(5,26);
    people::Customer c1("Dom", "Ginhac", d1, people::Gender::man);
 
-   bank::Account a1(c1, 1000.00, "FR76XXXX");
+   bank::Account a1(c1, "FR76XXXX", 1000.00);
 
    people::Customer c2("Bill", "Gates", d1, people::Gender::man);
-   bank::Account a2(c2, 100000.00, "US76XXXX");
+   bank::Account a2(c2, "US76XXXX", 100000.00);
 
 
    std::cout << "Hello " << c1 << std::endl;
@@ -61,8 +61,12 @@ int main(int argc, char const *argv[]) {
    std::cout << a2 ;
 
 
+   bank::Account a3(c1, "FR76XXXX");
+   std::cout << a3 ;
 
    std::cout << "bye." << std::endl;
+
+   bank::Saving s1(c1, "FR76XXX", -123, 4);
 
 
    return 0;
