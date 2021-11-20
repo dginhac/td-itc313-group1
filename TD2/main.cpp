@@ -7,11 +7,14 @@
   */
 #include <iostream>
 #include "todo.h"
+#include "todolist.h"
 
 int main(int argc, char const *argv[])
  {
      todo::Todo my_todo(1,"Run a marathon",
                         "Train and run next Paris Marathon", false);
+
+     todo::Todolist my_todolist;
      std::cout << "Bye." << std::endl;
      return 0;
  }

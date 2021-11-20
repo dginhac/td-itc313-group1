@@ -4,7 +4,7 @@ CXX        = clang++
 CXXFLAGS   = -Wall -std=c++17
 DEPFLAGS   = -MMD
 LDFLAGS    =
-SRCS       = main.cpp todo.cpp
+SRCS       = $(wildcard *.cpp)
 OBJS       = $(SRCS:.cpp=.o)
 TARGET     = app
 DEPS	   = $(OBJS:.o=.d)
